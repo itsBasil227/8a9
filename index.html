@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="description" content="قص ودمج الفيديو والصوت بدون فقدان الجودة — محلياً في متصفحك" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+    <title>قاصّ — Qass</title>
+    <script>
+      // Apply saved language/theme before first paint to avoid a flash.
+      try {
+        var p = JSON.parse(localStorage.getItem("qass:ui") || "{}").state || {};
+        var lang = p.lang || "ar";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        var th = p.theme || "dark";
+        if (th === "system") th = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = th;
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-B60YwtVN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DhqYXE8T.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
